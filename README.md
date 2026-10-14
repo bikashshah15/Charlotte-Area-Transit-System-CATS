@@ -15,8 +15,13 @@ realtime/    Script to download archived GTFS-Realtime data (data itself not com
 |---|---|---|---|
 | [`feeds/2026-fall`](feeds/2026-fall) | 2026-09-28 – 2027-01-31 | `0b81804f8b8c4f38eb242ef77ae40157838a42f1` | [CATS GTFS](https://gtfsrealtime.ridetransit.org/GTFSStatic/api/GTFSDownload/GTFS.zip) |
 | [`feeds/2025-fall`](feeds/2025-fall) | 2025-09-17 – 2026-02-01 | `2e36558a41be7de92a40a6894dd670f0733aa90d` | [Mobility Database snapshot `mdb-2265-202509180032`](https://files.mobilitydatabase.org/mdb-2265/mdb-2265-202509180032/mdb-2265-202509180032.zip) |
+| [`feeds/2021-fall`](feeds/2021-fall) | 2021-10-09 – 2022-02-06 | `6ffadf06ce0caa621bf6abbaad1ce147e521395f`* | [OpenMobilityData snapshot 2021-11-02](https://openmobilitydata-data.s3.us-west-1.amazonaws.com/public/feeds/charlotte-area-transit-system/1252/20211102/gtfs.zip) |
+| [`feeds/2020-fall`](feeds/2020-fall) | 2020-09-11 – 2021-01-31 | `e788f468f8d18a0731c3684929b4358c8b43742a`* | [OpenMobilityData snapshot 2020-09-25](https://openmobilitydata-data.s3.us-west-1.amazonaws.com/public/feeds/charlotte-area-transit-system/1252/20200925/gtfs.zip) |
+| [`feeds/2019-fall`](feeds/2019-fall) | 2019-09-10 – 2020-02-02 | `8aaa0eb969917b14cbc0460e66d185cf0268a031`* | [OpenMobilityData snapshot 2019-10-15](https://openmobilitydata-data.s3.us-west-1.amazonaws.com/public/feeds/charlotte-area-transit-system/1252/20191015/gtfs.zip) |
 
-The SHA1 column is the hash of the original GTFS zip, matching the version listed on Transitland.
+The SHA1 column is the hash of the original GTFS zip. Hashes without `*` match the version listed on Transitland. Those with `*` come from the OpenMobilityData (formerly TransitFeeds) archive, Mobility Database feed `mdb-640`, which Transitland does not have.
+
+In the 2019–2021 feeds, `route_id` combines the route number and the schedule period (e.g. `10-272`, `10-274`), so one route can have several IDs. Use `route_short_name` to compare routes across years.
 Archive of all versions: <https://www.transit.land/feeds/f-dnq-charlotteareatransitsystem>
 
 | File | Contents |
