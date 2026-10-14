@@ -1,0 +1,4 @@
+realtime/data/
+*.part
+__pycache__/
+.DS_Store
