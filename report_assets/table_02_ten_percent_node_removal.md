@@ -1,0 +1,6 @@
+| Removal strategy | Betweenness method | Number removed | Largest-component size or mean | Largest-component percentage | Pair reachability percentage | Trial count | Note |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Random removal (100-trial mean) | Not applicable | 289 | Not available | 46.93 | 23.11 | 100 | Mean component size was not printed in the saved output; only the mean percentage was saved. |
+| Static degree attack | Not applicable | 289 | 86 | 2.97 | 0.67 | 1 | Deterministic attack using degree ranking from the original graph. |
+| Static approximate-betweenness attack | Approximate, k=200, seed=42 | 289 | 2002 | 69.06 | Not available | 1 | Pair reachability was not calculated for the approximate-betweenness graph. |
+| Static exact-betweenness attack | Exact | 289 | 1735 | 59.85 | 36.71 | 1 | Deterministic attack using exact betweenness ranking from the original graph. |

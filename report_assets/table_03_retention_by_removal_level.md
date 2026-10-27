@@ -1,0 +1,7 @@
+| Removal percentage | Random mean (10 trials) | Static degree attack | Static approximate-betweenness attack |
+| --- | --- | --- | --- |
+| 5 | 80.07 | 17.28 | 81.13 |
+| 10 | 48.57 | 2.97 | 69.06 |
+| 15 | 23.10 | 1.66 | 30.39 |
+| 20 | 14.16 | 1.66 | 19.04 |
+| 25 | 7.56 | 1.59 | 8.52 |

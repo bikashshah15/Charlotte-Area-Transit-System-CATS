@@ -9,6 +9,12 @@ ridership/   Route- and mode-level ridership
 realtime/    Script to download archived GTFS-Realtime data (data itself not committed)
 ```
 
+## Network robustness analysis
+
+[`Copy of CATS_Robustness_Experiments.ipynb`](Copy%20of%20CATS_Robustness_Experiments.ipynb) contains the network robustness analysis and its saved outputs. [`export_report_assets.py`](export_report_assets.py) extracts those saved outputs into the report tables, figures, and structured results documented in [`report_assets/README.md`](report_assets/README.md).
+
+The graph inputs used by the notebook, `nodes.csv` and `edges.csv`, are not available in this repository, so the experiments were not rerun and the exported results cannot be independently associated with any of the GTFS feeds below. The report assets preserve the notebook's distinction between exact and approximate betweenness results.
+
 ## feeds/ — GTFS schedules
 
 | Folder | Service period | Transitland feed version (SHA1) | Source |

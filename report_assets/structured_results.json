@@ -1,0 +1,92 @@
+{
+  "provenance": {
+    "source_notebook": "Copy of CATS_Robustness_Experiments.ipynb",
+    "experiments_rerun": false,
+    "reason": "nodes.csv and edges.csv were unavailable; values were extracted from saved notebook outputs."
+  },
+  "baseline": [
+    {
+      "stops": 2899,
+      "connection_records": 3153,
+      "graph_nodes": 2899,
+      "graph_edges": 3153,
+      "connected_components": 3,
+      "largest_connected_component": 2849,
+      "largest_component_percent_of_original_stops": 98.28
+    }
+  ],
+  "ten_percent_removal": [
+    {
+      "removal_strategy": "Random removal (100-trial mean)",
+      "betweenness_method": "Not applicable",
+      "number_removed": 289,
+      "largest_component_size_or_mean": "Not available",
+      "largest_component_percent": 46.93,
+      "pair_reachability_percent": 23.11,
+      "trial_count": 100,
+      "note": "Mean component size was not printed in the saved output; only the mean percentage was saved."
+    },
+    {
+      "removal_strategy": "Static degree attack",
+      "betweenness_method": "Not applicable",
+      "number_removed": 289,
+      "largest_component_size_or_mean": 86,
+      "largest_component_percent": 2.97,
+      "pair_reachability_percent": 0.67,
+      "trial_count": 1,
+      "note": "Deterministic attack using degree ranking from the original graph."
+    },
+    {
+      "removal_strategy": "Static approximate-betweenness attack",
+      "betweenness_method": "Approximate, k=200, seed=42",
+      "number_removed": 289,
+      "largest_component_size_or_mean": 2002,
+      "largest_component_percent": 69.06,
+      "pair_reachability_percent": "Not available",
+      "trial_count": 1,
+      "note": "Pair reachability was not calculated for the approximate-betweenness graph."
+    },
+    {
+      "removal_strategy": "Static exact-betweenness attack",
+      "betweenness_method": "Exact",
+      "number_removed": 289,
+      "largest_component_size_or_mean": 1735,
+      "largest_component_percent": 59.85,
+      "pair_reachability_percent": 36.71,
+      "trial_count": 1,
+      "note": "Deterministic attack using exact betweenness ranking from the original graph."
+    }
+  ],
+  "removal_curve": [
+    {
+      "removal_percent": 5,
+      "random_10_trial_mean_percent": 80.07,
+      "static_degree_percent": 17.28,
+      "static_approximate_betweenness_percent": 81.13
+    },
+    {
+      "removal_percent": 10,
+      "random_10_trial_mean_percent": 48.57,
+      "static_degree_percent": 2.97,
+      "static_approximate_betweenness_percent": 69.06
+    },
+    {
+      "removal_percent": 15,
+      "random_10_trial_mean_percent": 23.1,
+      "static_degree_percent": 1.66,
+      "static_approximate_betweenness_percent": 30.39
+    },
+    {
+      "removal_percent": 20,
+      "random_10_trial_mean_percent": 14.16,
+      "static_degree_percent": 1.66,
+      "static_approximate_betweenness_percent": 19.04
+    },
+    {
+      "removal_percent": 25,
+      "random_10_trial_mean_percent": 7.56,
+      "static_degree_percent": 1.59,
+      "static_approximate_betweenness_percent": 8.52
+    }
+  ]
+}
